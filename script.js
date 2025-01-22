@@ -4,6 +4,9 @@ const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
 const btnw = document.querySelectorAll(".btn1");
+const container = document.getElementById("container");
+const registrbtn = document.getElementById("register");
+const loginbtn = document.getElementById("login");
 
 
 
@@ -177,17 +180,23 @@ document.getElementById("getEstimateButton").addEventListener("click", function(
     clickCount++;
     localStorage.setItem("estimateClickCount", clickCount);
 
-    if (clickCount > 3) {
+    if (clickCount >= 3) {
         // Display the login form
-        document.getElementById("loginForm").style.display = "block";
+        window.location.href = "login.html";
     } else {
         // Proceed with the estimate calculation if under the limit
         calculateEstimate();
     }
+});}
+
+registrbtn.addEventListener('click',() =>{
+    container.classList.add("active");
+
 });
 
-
-}
+loginbtn.addEventListener("click",() => {
+    container.classList.remove("active");
+});
 
 
 

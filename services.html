@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <head><title>SHOPPING</title>
+        <link rel="stylesheet" href="styles.css">
+    
+    </head>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Find and replace all price elements
+          document.querySelectorAll('h5').forEach(function(priceElement) {
+            priceElement.innerHTML = priceElement.innerHTML.replace('$', '₹');
+          });
+        });
+      </script>
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head> -->
 <body>
+  <nav style="padding: 10px 20px;border-bottom: 2px solid rgb(211, 149, 119);">
+    <ul>
+             <li><a href="project.html">Home</a></li>
+             <li><a href="#about">About Us</a></li>
+             <li><a href="#contactl">Contact</a></li>
+             <li><a href="services.html">Services</a></li>
+             <li><a href="shopping.html">Shopping</a></li>
+    
+             <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+</nav>
   <!-- <section class="services">
     <div class="service-item">
       <h3>Residential Design</h3>
